@@ -114,10 +114,10 @@
                 </div>
                  <div class="md:flex justify-between items-center mt-3">
                     <h4 class="md:m-0 md:text-[#FFF] mb-2 ml-5 text-[#6E447B]">Пароль</h4>
-                    <MesaageInput :class="windowUiStorage.window_size < 768 ? 'w-full' : ''" :eyeIcon="true" placeholder="Введите пароль"/>
+                    <MesaageInput :class="windowUiStorage.window_size < 768 ? 'w-full' : ''" type="password" :eyeIcon="true" placeholder="Введите пароль"/>
                 </div>
                 <div class="text-end mt-3">
-                    <button class="custom-btn text-[14px] gap-2 py-3" style="background-image: linear-gradient(to right, #EE0979, #FF6A00);">
+                    <button :class="windowUiStorage.window_size < 768 ? 'w-full' : ''" class="custom-btn text-[14px] gap-2 py-3" style="background-image: linear-gradient(to right, #EE0979, #FF6A00);">
                         <p>Сохранить</p>
                     </button>
                 </div>

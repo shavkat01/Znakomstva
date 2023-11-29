@@ -57,7 +57,7 @@
                 <MesaageInput class="mt-2" placeholder="Введите электронную почту">
                     <img src="@/assets/icons/message.svg" class="max-w-[20px]" alt="icon">
                 </MesaageInput>
-                <MesaageInput class="mt-2" :eyeIcon="true" placeholder="Введите пароль">
+                <MesaageInput class="mt-2" type="password" :eyeIcon="true" placeholder="Введите пароль">
                     <img src="@/assets/icons/password.svg" class="max-w-[20px]" alt="icon">
                 </MesaageInput>
                 <div>
