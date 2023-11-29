@@ -8,6 +8,11 @@
 
 </script>
 <template>
+
+<!-- Shu page ni ozida mobilniyga moslashga ulgurilamadi -->
+
+
+
     <div class="w-full md:mt-0 mt-5">
         <h1 class="font-semibold text-[28px]">Профиль</h1>
         <div class="w-full mt-5 flex gap-4">
