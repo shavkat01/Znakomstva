@@ -12,10 +12,9 @@
 <!-- Shu page ni ozida mobilniyga moslashga ulgurilamadi -->
 
 
-
     <div class="w-full md:mt-0 mt-5">
         <h1 class="font-semibold text-[28px]">Профиль</h1>
-        <div class="w-full mt-5 flex gap-4">
+        <div class="w-full mt-5 md:flex gap-4">
             <div class="w-[30%]">
                 <img class="w-[280px]" src="@/assets/images/candidate-main.svg" alt="ded">
                 <div class="flex justify-between mt-3">
