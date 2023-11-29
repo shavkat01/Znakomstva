@@ -19,7 +19,7 @@ function pushRouteFun(path){
     <header :style="windowUiStorage.chat_open ? 'background: #2D1436': ''" style="z-index: 110;" v-if="windowUiStorage.login" class="header fixed flex justify-between w-full items-center p-3">
         <img src="@/assets/love-birds1.svg" class="w-[40px] cursor-pointer" alt="">
         <img src="@/assets/icons/search.svg" class="w-[30px] cursor-pointer" alt="icon">
-        <img src="@/assets/icons/Group.svg" class="w-[30px] cursor-pointer" alt="icon">
+        <img @click="windowUiStorage.chat_open = true" src="@/assets/icons/Group.svg" class="w-[30px] cursor-pointer" alt="icon">
         <img src="@/assets/images/profile.svg" class="w-[40px] cursor-pointer" alt="icon">
         <img @click="bar_open = true" src="@/assets/icons/menu.svg" class="w-[50px] cursor-pointer" alt="icon">
 
@@ -60,7 +60,7 @@ function pushRouteFun(path){
             <ul class="text-center text-[28px]">
                 <li class="cursor-pointer mt-6" @click="pushRouteFun('/anketa')" :class="route.path.includes('/anketa') ? 'menu-active' : ''">Анкеты <span class="span-mob -bottom-3"/> </li>
                 <li class="cursor-pointer mt-6" @click="pushRouteFun('/message')" :class="route.path == '/message' ? 'menu-active' : ''">Сообщения <span class="span-mob -bottom-3"/></li>
-                <li class="cursor-pointer mt-6" :class="route.path == '/signature' ? 'menu-active' : ''">Подписка <span class="span-mob -bottom-3"/></li>
+                <li class="cursor-pointer mt-6" @click="router.push({path: '/signature'})" :class="route.path == '/signature' ? 'menu-active' : ''">Подписка <span class="span-mob -bottom-3"/></li>
            </ul>
         </div>
     </div>

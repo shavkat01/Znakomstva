@@ -1,8 +1,8 @@
 <template>
-    <div class="w-full">
+    <div class="w-full md:mt-0 mt-5">
         <h1 class="font-semibold text-[28px]">Избранное</h1>
         <div class="w-full flex flex-wrap gap-3 justify-between mt-3">
-            <div @click.self="router.push({path: '/anketa/candidate-profile', params: {id: i}})" v-for="i in 3" :key="i" class="card md:max-w-[350px] max-w-[170px]">
+            <div @click.self="router.push({path: '/message', params: {id: i}})" v-for="i in 3" :key="i" class="card md:max-w-[350px] max-w-[162px]">
                 <img class="absolute top-4 right-4" src="@/assets/icons/delete-button.svg" alt="">
                 <img src="@/assets/images/fav-photo.svg" class="w-full" alt="icon">
                 <div class="absolute w-full -bottom-[1px]">

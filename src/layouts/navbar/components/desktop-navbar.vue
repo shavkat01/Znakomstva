@@ -29,7 +29,7 @@ const router = useRouter()
            <ul class="flex gap-10">
             <li class="cursor-pointer" @click="router.push({path: '/anketa'})" :class="route.path.includes('/anketa') ? 'menu-active' : ''">Анкеты <span class="-bottom-9"/> </li>
             <li class="cursor-pointer" @click="router.push({path: '/message'})" :class="route.path == '/message' ? 'menu-active' : ''">Сообщения <span class="-bottom-9"/></li>
-            <li class="cursor-pointer" :class="route.path == '/signature' ? 'menu-active' : ''">Подписка <span class="-bottom-9"/></li>
+            <li class="cursor-pointer" @click="router.push({path: '/signature'})" :class="route.path == '/signature' ? 'menu-active' : ''">Подписка <span class="-bottom-9"/></li>
            </ul>
 
            <div class="flex gap-16">
@@ -37,7 +37,7 @@ const router = useRouter()
 
                 <div class="flex gap-5">
                     <img class="cursor-pointer" src="@/assets/icons/search.svg" alt="icon">
-                    <div class="w-full flex items-center relative cursor-pointer">
+                    <div @click="windowUiStorage.chat_open = true" class="w-full flex items-center relative cursor-pointer">
                         <span class="absolute text-[10px] px-[3px] rounded-[5px] -right-4 top-1 font-bold" style="background-image: linear-gradient(to right, #EE0979, #FF6A00);">123</span>
                         <img src="@/assets/icons/Group.svg" alt="icon">
                     </div>

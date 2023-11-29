@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../views/Login/index.vue'
 import SignUp from '../views/SignUp/index.vue'
 import Anketa from '../views/Anketa/index.vue'
-import CandidateProfile from '../views/CandidateProfile/index.vue'
+// import CandidateProfile from '../views/CandidateProfile/index.vue'
 import Message from '../views/Message/index.vue'
+import Signature from '../views/Signature/index.vue'
 import Profile from '../views/Profile/index.vue'
 
 const router = createRouter({
@@ -25,14 +26,14 @@ const router = createRouter({
       component: Anketa
     },
     {
-      path: '/anketa/candidate-profile',
-      name: 'CandidateProfile',
-      component: CandidateProfile
-    },
-    {
       path: '/message',
       name: 'Message',
       component: Message
+    },
+    {
+      path: '/signature',
+      name: 'Signature',
+      component: Signature
     },
     {
       path: '/profile',
@@ -57,10 +58,10 @@ const router = createRouter({
 
 
 
-    // {
-    //   path: '/:catchAll(.*)*',
-    //   component: () => import('pages/ErrorNotFound.vue')
-    // }
+    {
+      path: '/:catchAll(.*)*',
+      component: () => import('@/components/404.vue')
+    }
   ]
 })
 

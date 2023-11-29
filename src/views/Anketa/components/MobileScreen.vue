@@ -26,7 +26,7 @@ const windowUiStorage = windowUiStore()
                 :space-between="2" 
                 :modules="[Navigation]" 
             >
-                <SwiperSlide @click="router.push({path: '/anketa/candidate-profile', params: {id: i}})" v-for="i in 5" :key="i" class="relative w-[75vw]">
+                <SwiperSlide @click="router.push({path: '/message', params: {id: i}})" v-for="i in 5" :key="i" class="relative w-[75vw]">
                     <img src="@/assets/images/Cardphoto2.svg" alt="icon">
                     <div class="absolute w-full -bottom-[2px]">
                         <div class="px-4 py-6">
@@ -52,7 +52,7 @@ const windowUiStorage = windowUiStore()
                 :space-between="2" 
                 :modules="[Navigation]" 
             >
-                <SwiperSlide @click="router.push({path: '/anketa/candidate-profile', params: {id: i}})" v-for="i in 5" :key="i" class="relative w-[75vw]">
+                <SwiperSlide @click="router.push({path: '/message', params: {id: i}})" v-for="i in 5" :key="i" class="relative w-[75vw]">
                     <img src="@/assets/images/Cardphoto3.svg" alt="icon">
                     <div class="absolute w-full -bottom-[2px]">
                         <div class="px-4 py-6">
@@ -78,7 +78,7 @@ const windowUiStorage = windowUiStore()
                 :space-between="2" 
                 :modules="[Navigation]" 
             >
-                <SwiperSlide @click="router.push({path: '/anketa/candidate-profile', params: {id: i}})" v-for="i in 5" :key="i" class="relative w-[75vw]">
+                <SwiperSlide @click="router.push({path: '/message', params: {id: i}})" v-for="i in 5" :key="i" class="relative w-[75vw]">
                     <img src="@/assets/images/Cardphoto5.svg" alt="icon">
                     <div class="absolute w-full -bottom-[2px]">
                         <div class="px-4 py-6">

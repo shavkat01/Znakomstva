@@ -1,9 +1,10 @@
 <script setup>
-import {ref, defineProps} from 'vue'
+import {ref, defineProps, defineEmits} from 'vue'
 import { useRouter, useRoute, RouterView } from 'vue-router'
 const route = useRoute()
 
 
+const emit = defineEmits('selectItem')
 const props = defineProps({
     items: {
         type: Array,
@@ -33,6 +34,7 @@ if(props.items[0]?.currentPath){
 
 function selectFun(item){
   selected.value = item.name
+  emit('selectItem', item)
 }
 
 </script>
@@ -80,8 +82,11 @@ function selectFun(item){
     padding: 10px;
     border-radius: 10px;
     background-color: #230E2B;
-    height: 200px !important;
+    max-height: 200px !important;
     overflow: auto;
+    background: linear-gradient(#230E2B, #230E2B) padding-box,
+              linear-gradient(to right, #EE0979, #FF6A00) border-box;
+    border: 1px solid transparent;
 
     &::-webkit-scrollbar{
       width:4px;
@@ -96,6 +101,7 @@ function selectFun(item){
     li{
       padding: 10px 20px;
       border: none;
+      border-radius: 10px;
       &:hover{
         background: #111124;
       }

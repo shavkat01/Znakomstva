@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
-import Chat from '@/components/Chat.vue'
+// import Chat from '@/components/Chat.vue'
 import {windowUiStore} from '@/stores/window-ui'
 
 const windowUiStorage = windowUiStore()
@@ -19,7 +19,7 @@ function openChat(){
 </script>
 
 <template>
-<Chat @close="chat_open=false" v-if="chat_open"/>
+<!-- <Chat @close="chat_open=false" v-if="chat_open"/> -->
 
     <div>
         <div class="relative candidate-main-mob-image">

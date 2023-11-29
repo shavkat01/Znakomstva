@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <InputSelect v-else :items="[{name: 'Профиль', currentPath: route.path, path: '/profile'}, {name: 'Избранное ', currentPath: route.path, path: '/favourite'}, {name: 'Личный счет', currentPath: route.path, path: '/profile-account'}]"/>
+            <InputSelect v-else @selectItem="(item)=>router.push({path: item.path})" :items="[{name: 'Профиль', currentPath: route.path, path: '/profile'}, {name: 'Избранное ', currentPath: route.path, path: '/favourite'}, {name: 'Личный счет', currentPath: route.path, path: '/profile-account'}]"/>
 
             <div class="md:w-[80%] md:ml-5">
                 <RouterView />

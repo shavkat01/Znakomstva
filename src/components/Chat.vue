@@ -88,8 +88,8 @@ let selected_condidate_chat = ref()
 
 selected_condidate_chat.value = condidates[0]
 
-function closeChat(item){
-    emit('close')
+function closeChat(){
+    // emit('close')
     windowUiStorage.chat_open = false
 }
 function selectMenuFun(item){
@@ -102,7 +102,7 @@ function selectMenuFun(item){
 </script>
 
 <template>
-    <div v-if="windowUiStorage.window_size > 768" @click.self="emit('close')" style="z-index: 100" class="fixed top-0 w-[100vw] h-[100vh] bg-[#1D0B23D9] flex items-center justify-center">
+    <div v-if="windowUiStorage.window_size > 768" @click.self="closeChat" style="z-index: 100" class="fixed top-0 w-[100vw] h-[100vh] bg-[#1D0B23D9] flex items-center justify-center">
         <div class="w-[1050px] h-[550px] flex rounded-[50px] bg-[#1C0A22]">
             <div class="w-[40%] p-8">
                 <div @click="selectMenuFun(item)" :class="selected_condidate_chat.id == item.id ? 'selected' : ''" v-for="item in condidates" :key="item.id" class="px-10 my-2 py-3 relative flex items-center gap-6 rounded-[500px] menu-background">
